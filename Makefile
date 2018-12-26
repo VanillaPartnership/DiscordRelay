@@ -1,5 +1,4 @@
 NAME=discord-relay
-VERSION=$(shell git rev-parse HEAD)
 REPO=vanilla-partnership
 PWD=$(shell pwd)
 
