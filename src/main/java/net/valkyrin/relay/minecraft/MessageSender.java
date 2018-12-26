@@ -51,7 +51,7 @@ public final class MessageSender
                 } catch (Exception ignored) {
                     try {
                         System.out.println("Connection to RCON failed, retrying...");
-                        Thread.sleep(1000);
+                        Thread.sleep(10000);
                     } catch (InterruptedException e) {
                         break;
                     }
