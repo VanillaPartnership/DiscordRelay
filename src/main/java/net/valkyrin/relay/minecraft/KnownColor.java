@@ -18,7 +18,6 @@
 
 package net.valkyrin.relay.minecraft;
 
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import net.kyori.text.format.TextColor;
 
@@ -44,7 +43,10 @@ public enum KnownColor {
     WHITE(Color.WHITE);
     private final Color color;
 
-    public static KnownColor getClosest(final @NonNull Color color) {
+    public static KnownColor getClosest(final Color color) {
+        if (color == null) {
+            return WHITE;
+        }
         long diff = Long.MAX_VALUE;
         KnownColor closest = null;
         for (KnownColor knownColor : KnownColor.values()) {
